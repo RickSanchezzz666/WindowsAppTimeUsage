@@ -35,8 +35,6 @@ Thumbs.db
 /.qmake.cache
 /.qmake.stash
 
-.vs
-
 # qtcreator generated files
 *.pro.user*
 CMakeLists.txt.user*
@@ -52,13 +50,15 @@ CMakeLists.txt.user*
 *.idb
 *.ilk
 *.pdb
+*.sln
 *.suo
+*.vcproj
 *vcproj.*.*.user
 *.ncb
 *.sdf
 *.opensdf
-*.vs
-
+*.vcxproj
+*vcxproj.*
 
 # MinGW generated files
 *.Debug

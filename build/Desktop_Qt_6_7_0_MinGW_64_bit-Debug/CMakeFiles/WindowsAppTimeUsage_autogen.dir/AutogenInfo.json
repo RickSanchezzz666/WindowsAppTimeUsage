@@ -255,6 +255,12 @@
 	"HEADERS" : 
 	[
 		[
+			"D:/Repos/WindowsAppTimeUsage/csvFileController.h",
+			"MU",
+			"EWIEGA46WW/moc_csvFileController.cpp",
+			null
+		],
+		[
 			"D:/Repos/WindowsAppTimeUsage/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
