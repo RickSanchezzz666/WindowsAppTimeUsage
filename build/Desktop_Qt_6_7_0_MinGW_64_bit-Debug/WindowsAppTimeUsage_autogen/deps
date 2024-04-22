@@ -769,6 +769,8 @@ WindowsAppTimeUsage_autogen/timestamp: \
 	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
 	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/3.27.7/CMakeSystem.cmake \
 	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/WindowsAppTimeUsage_autogen/moc_predefs.h \
+	D:/Repos/WindowsAppTimeUsage/csvFileController.cpp \
+	D:/Repos/WindowsAppTimeUsage/csvFileController.h \
 	D:/Repos/WindowsAppTimeUsage/main.cpp \
 	D:/Repos/WindowsAppTimeUsage/mainwindow.cpp \
 	D:/Repos/WindowsAppTimeUsage/mainwindow.h \

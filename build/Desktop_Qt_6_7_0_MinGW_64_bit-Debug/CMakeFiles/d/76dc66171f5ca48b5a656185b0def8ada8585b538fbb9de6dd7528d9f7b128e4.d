@@ -770,6 +770,8 @@ WindowsAppTimeUsage_autogen/timestamp: \
   CMakeFiles/3.27.7/CMakeRCCompiler.cmake \
   CMakeFiles/3.27.7/CMakeSystem.cmake \
   WindowsAppTimeUsage_autogen/moc_predefs.h \
+  D:/Repos/WindowsAppTimeUsage/csvFileController.cpp \
+  D:/Repos/WindowsAppTimeUsage/csvFileController.h \
   D:/Repos/WindowsAppTimeUsage/main.cpp \
   D:/Repos/WindowsAppTimeUsage/mainwindow.cpp \
   D:/Repos/WindowsAppTimeUsage/mainwindow.h \

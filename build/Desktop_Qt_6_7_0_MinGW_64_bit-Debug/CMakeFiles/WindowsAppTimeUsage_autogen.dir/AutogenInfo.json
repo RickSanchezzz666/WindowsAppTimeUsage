@@ -338,6 +338,7 @@
 	"SETTINGS_FILE" : "D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/CMakeFiles/WindowsAppTimeUsage_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "D:/Repos/WindowsAppTimeUsage/csvFileController.cpp", "MU", null ],
 		[ "D:/Repos/WindowsAppTimeUsage/main.cpp", "MU", null ],
 		[ "D:/Repos/WindowsAppTimeUsage/mainwindow.cpp", "MU", null ]
 	],

@@ -27,11 +27,12 @@ struct Application {
     QDateTime sessionStartTime;
     QDateTime sessionEndTime;
     int sessionTime;
+    int lastSessionTime;
     bool isSession;
     bool isActive = false;
 
-    Application(QString name, bool session = false, QDateTime s = QDateTime().currentDateTime(), QDateTime e = QDateTime(), int t = 0) :
-        appName(name), sessionStartTime(s), sessionEndTime(e), sessionTime(t), isSession(session) {}
+    Application(QString name, bool session = false, QDateTime s = QDateTime().currentDateTime(), QDateTime e = QDateTime(), int t = 0, int lT = 0) :
+        appName(name), sessionStartTime(s), sessionEndTime(e), sessionTime(t), isSession(session), lastSessionTime(lT) {}
 };
 
 class MainWindow : public QMainWindow
