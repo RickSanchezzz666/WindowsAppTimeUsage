@@ -1,9 +1,9 @@
 # ninja log v5
-5	511	7347906220708370	WindowsAppTimeUsage_autogen/timestamp	c167b7d0c6f00855
-2457	2616	7347906242187941	WindowsAppTimeUsage.exe	f4b4c7d4f953bdd0
-5	511	7347906220708370	WindowsAppTimeUsage_autogen/mocs_compilation.cpp	c167b7d0c6f00855
-5	511	7347906220708370	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/WindowsAppTimeUsage_autogen/timestamp	c167b7d0c6f00855
-5	511	7347906220708370	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/WindowsAppTimeUsage_autogen/mocs_compilation.cpp	c167b7d0c6f00855
-518	2457	7347906240635190	CMakeFiles/WindowsAppTimeUsage.dir/mainwindow.cpp.obj	fee025bff3bc293f
-514	2347	7347906239528127	CMakeFiles/WindowsAppTimeUsage.dir/main.cpp.obj	6c18e56a25a255f7
-511	2388	7347906239923397	CMakeFiles/WindowsAppTimeUsage.dir/WindowsAppTimeUsage_autogen/mocs_compilation.cpp.obj	3f2a88d49e6d2dc5
+1109	4641	7354027943221309	CMakeFiles/WindowsAppTimeUsage.dir/WindowsAppTimeUsage_autogen/mocs_compilation.cpp.obj	3f2a88d49e6d2dc5
+1111	4551	7354027942312516	CMakeFiles/WindowsAppTimeUsage.dir/main.cpp.obj	6c18e56a25a255f7
+161	3699	7354775778173457	CMakeFiles/WindowsAppTimeUsage.dir/mainwindow.cpp.obj	fee025bff3bc293f
+28	157	7354775742760479	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/WindowsAppTimeUsage_autogen/mocs_compilation.cpp	c167b7d0c6f00855
+28	157	7354775742760479	D:/Repos/WindowsAppTimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/WindowsAppTimeUsage_autogen/timestamp	c167b7d0c6f00855
+28	157	7354775742760479	WindowsAppTimeUsage_autogen/mocs_compilation.cpp	c167b7d0c6f00855
+3699	3916	7354775780331296	WindowsAppTimeUsage.exe	f4b4c7d4f953bdd0
+28	157	7354775742760479	WindowsAppTimeUsage_autogen/timestamp	c167b7d0c6f00855
