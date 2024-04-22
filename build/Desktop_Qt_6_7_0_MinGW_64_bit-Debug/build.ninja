@@ -184,7 +184,7 @@ build WindowsAppTimeUsage_autogen/timestamp WindowsAppTimeUsage_autogen/mocs_com
 #############################################
 # Phony custom command for CMakeFiles\WindowsAppTimeUsage_autogen_timestamp_deps
 
-build CMakeFiles/WindowsAppTimeUsage_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/WindowsAppTimeUsage_autogen_timestamp_deps: phony D$:/Programms/Qt/6.7.0/mingw_64/./bin/uic.exe D$:/Programms/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a
+build CMakeFiles/WindowsAppTimeUsage_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/WindowsAppTimeUsage_autogen_timestamp_deps: phony D$:/Programms/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Programms/Qt/6.7.0/mingw_64/./bin/uic.exe D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a
 
 
 #############################################

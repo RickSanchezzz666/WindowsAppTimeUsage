@@ -1,4 +1,21 @@
-#ifndef CSVFILEREAD_H
-#define CSVFILEREAD_H
+#ifndef CSVFILECONTROLLER_H
+#define CSVFILECONTROLLER_H
 
-#endif // CSVFILEREAD_H
+#include <fstream>
+
+class CSVController{
+public:
+    static void createCSVFile();
+    static void readCSVFile();
+    static void editCSVFile();
+};
+
+void CSVController::createCSVFile() {
+    try {
+
+    } catch (...) {
+
+    }
+}
+
+#endif // CSVFILECONTROLLER_H

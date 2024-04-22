@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-92ff45604e6b3cf20687.json",
+					"jsonFile" : "directory-.-Debug-e7462d56def5dcdbc4fe.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "WindowsAppTimeUsage::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-WindowsAppTimeUsage-Debug-cd0f40c06c1df704edfa.json",
+					"jsonFile" : "target-WindowsAppTimeUsage-Debug-62f547540fcbf818fe9a.json",
 					"name" : "WindowsAppTimeUsage",
 					"projectIndex" : 0
 				},

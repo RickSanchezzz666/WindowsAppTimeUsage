@@ -48,6 +48,8 @@ void MainWindow::calculateTimeUsage() {
         }
     }
 
+    // status bar message via try catch
+
     for (const auto& app : currentAppsList) {
         bool isExist = false;
         for (auto& existApp : listOfApplications) {
