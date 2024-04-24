@@ -9,10 +9,12 @@
 
 class CSVController{
 public:
-    static void createCSVFile(const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName; LastStart; LastClose; LastSessionTime; SessionTime\n");
+    static void createCSVFile(const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName; LastStart; LastClose; LastSessionTime; SessionTime; TotalTimeSpent\n");
     static std::vector<std::string> readCSVFile(const std::string& fileName = "timeUsageLogs.csv");
-    static void editCSVFile(const std::string& appName, const QDateTime& sTime, const QDateTime& eTime, const int& lTime, const int& time, const std::string& fileName = "timeUsageLogs.csv");
-    static bool isLogsFileEmpty(const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName; LastStart; LastClose; LastSessionTime; SessionTime\n");
+    static void editCSVFile(const std::string& appName, const QDateTime& sTime, const QDateTime& eTime, const int& lTime, const int& time, long int total, const std::string& fileName = "timeUsageLogs.csv");
+    static bool isLogsFileEmpty(const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName; LastStart; LastClose; LastSessionTime; SessionTime; TotalTimeSpent\n");
+
+    static std::string secondsToTime(long int& seconds);
 };
 
 #endif // CSVFILECONTROLLER_H

@@ -30,9 +30,10 @@ struct Application {
     int lastSessionTime;
     bool isSession;
     bool isActive = false;
+    long int totalTime;
 
-    Application(QString name, bool session = false, QDateTime s = QDateTime().currentDateTime(), QDateTime e = QDateTime(), int t = 0, int lT = 0) :
-        appName(name), sessionStartTime(s), sessionEndTime(e), sessionTime(t), isSession(session), lastSessionTime(lT) {}
+    Application(QString name, bool session = false, QDateTime s = QDateTime().currentDateTime(), QDateTime e = QDateTime(), int t = 0, int lT = 0, int total = 0) :
+        appName(name), sessionStartTime(s), sessionEndTime(e), sessionTime(t), isSession(session), lastSessionTime(lT), totalTime(total) {}
 };
 
 class MainWindow : public QMainWindow
@@ -52,6 +53,8 @@ public:
     void calculateTimeUsage();
 
     void initialCalculation();
+
+    long int timeToSeconds(const std::string& time);
 
 private:
     Ui::MainWindow *ui;

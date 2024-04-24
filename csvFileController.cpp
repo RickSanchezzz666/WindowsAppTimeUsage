@@ -1,10 +1,23 @@
 #include "csvFileController.h"
 #include <fstream>
 
-void CSVController::editCSVFile(const std::string& appName, const QDateTime& sTime, const QDateTime& eTime,  const int& lTime, const int& time, const std::string& fileName) {
+std::string CSVController::secondsToTime(long int& seconds) {
+    int hours = seconds / 3600;
+    int minutes = (seconds % 3600) / 60;
+
+    std::string hoursStr = std::to_string(hours);
+    if (hours < 10) hoursStr = "0" + hoursStr;
+
+    std::string minutesStr = std::to_string(minutes);
+    if (minutes < 10) minutesStr = "0" + minutesStr;
+
+    return hoursStr + ":" + minutesStr;
+}
+
+void CSVController::editCSVFile(const std::string& appName, const QDateTime& sTime, const QDateTime& eTime,  const int& lTime, const int& time, long int total, const std::string& fileName) {
     try {
         std::vector<std::string> content = readCSVFile(fileName);
-        std::ofstream logsFile(fileName, std::ios::trunc);
+        std::ofstream logsFile(fileName, std::ios::trunc); // clear file before append
 
         if (!logsFile.is_open()) throw std::runtime_error("Unable to open Logs File");
 
@@ -14,7 +27,8 @@ void CSVController::editCSVFile(const std::string& appName, const QDateTime& sTi
         newLine.append(sTime.toString("yyyy-MM-dd HH:mm:ss") + "; ");
         newLine.append(eTime.toString("yyyy-MM-dd HH:mm:ss") + "; ");
         newLine.append(start.addSecs(lTime).toString("hh:mm:ss") + "; ");
-        newLine.append(start.addSecs(time).toString("hh:mm:ss") + "\n");
+        newLine.append(start.addSecs(time).toString("hh:mm:ss") + "; ");
+        newLine.append(secondsToTime(total) + "\n");
 
         size_t foundName;
         for (auto& line : content) {
@@ -44,7 +58,7 @@ void CSVController::editCSVFile(const std::string& appName, const QDateTime& sTi
 
 void CSVController::createCSVFile(const std::string& fileName, const std::string& header) {
     try {
-        std::ofstream logsFile(fileName, std::ios::trunc);
+        std::ofstream logsFile(fileName, std::ios::trunc); // clear file before append
 
         if (!logsFile.is_open()) throw std::runtime_error("Unable to create Logs File");
 
