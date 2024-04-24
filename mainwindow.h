@@ -11,6 +11,10 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QTime>
+#include <QSettings>
+#include <QDir>
+#include <QSystemTrayIcon>
+#include <QPushButton>
 
 #include <windows.h>
 #include <list>
@@ -56,8 +60,23 @@ public:
 
     long int timeToSeconds(const std::string& time);
 
+    void setAutorun(int arg);
+
+    bool isAutorunEnabled();
+
+    void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
+
+private slots:
+    void on_autoRunCheckBox_stateChanged(int arg1);
+
+    void on_pushButton_clicked();
+
 private:
     Ui::MainWindow *ui;
+
+    QSystemTrayIcon *trayIcon;
+
+    bool autoRun = false;
 
     QTimer *timer;
 

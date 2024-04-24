@@ -13,11 +13,39 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QWidget::setWindowTitle("TimeUsage");
+    QIcon icon(":/icon.ico");
+    QApplication::setWindowIcon(icon);
+
+    trayIcon = new QSystemTrayIcon(this);
+    trayIcon->setIcon(icon);
+
+    trayIcon->show();
+
+    autoRun = isAutorunEnabled();
+    if (autoRun) ui->autoRunCheckBox->setCheckState(Qt::Checked);
+
+    connect(trayIcon, &QSystemTrayIcon::activated, this, &MainWindow::trayIconActivated);
+
     initialCalculation();
 
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::calculateTimeUsage); // timer every 1s running function calculateTimeUsage
     timer->start(1000);
+}
+
+void MainWindow::trayIconActivated(QSystemTrayIcon::ActivationReason reason) {
+    if (reason == QSystemTrayIcon::DoubleClick) {
+        this->show();
+        trayIcon->hide();
+    }
+}
+
+bool MainWindow::isAutorunEnabled() {
+    QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
+    QString appPath = QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
+    QString appName = QCoreApplication::applicationName();
+    QString regValue = settings.value(appName).toString();
+    return (regValue == appPath);
 }
 
 // Main Window Destructor
@@ -35,7 +63,7 @@ MainWindow::~MainWindow()
             } else lTime = existApp.lastSessionTime;
             total += (existApp.sessionTime <= 1 ? 0 : lTime);
             CSVController::editCSVFile(existApp.appName.toStdString(), existApp.sessionStartTime, existApp.sessionEndTime,
-                lTime, 0, total);
+                                       lTime, 0, total);
         } catch (const std::exception& err) {
             ui->statusbar->showMessage(err.what());
         }
@@ -49,6 +77,22 @@ MainWindow::~MainWindow()
         delete taskListProcess;
     }
 }
+
+void MainWindow::setAutorun(int arg) {
+    QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
+
+    autoRun = (arg == 0 ? false : true);
+
+    if (autoRun) {
+        QString appName = QCoreApplication::applicationName();
+        QString appPath = QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
+        settings.setValue(appName, appPath);
+    } else {
+        QString appName = QCoreApplication::applicationName();
+        settings.remove(appName);
+    }
+}
+
 
 long int MainWindow::timeToSeconds(const std::string& time) {
     size_t pos = time.find(":");
@@ -82,7 +126,7 @@ void MainWindow::initialCalculation() {
         for (auto& existApp : listOfApplications) {
             try {
                 CSVController::editCSVFile(existApp.appName.toStdString(), existApp.sessionStartTime, existApp.sessionEndTime,
-                    existApp.lastSessionTime, existApp.sessionTime, existApp.totalTime);
+                                           existApp.lastSessionTime, existApp.sessionTime, existApp.totalTime);
             } catch (const std::exception& err) {
                 ui->statusbar->showMessage(err.what());
             }
@@ -112,10 +156,10 @@ void MainWindow::initialCalculation() {
             if (!found) { // if app doesn't exist in log file, then we creating it
                 if (parts[0] == "AppName") continue;
                 listOfApplications.push_back(Application(parts[0], false, QDateTime::fromString(parts[1], "yyyy-MM-dd hh:mm:ss"),
-                    QDateTime::fromString(parts[2], "yyyy-MM-dd hh:mm:ss"),
-                    QTime::fromString(parts[4]).second() + QTime::fromString(parts[4]).minute() * 60 + QTime::fromString(parts[4]).hour() * 3600,
-                    QTime::fromString(parts[3]).second() + QTime::fromString(parts[3]).minute() * 60 + QTime::fromString(parts[3]).hour() * 3600,
-                    timeToSeconds(parts[5].toStdString())));
+                                                         QDateTime::fromString(parts[2], "yyyy-MM-dd hh:mm:ss"),
+                                                         QTime::fromString(parts[4]).second() + QTime::fromString(parts[4]).minute() * 60 + QTime::fromString(parts[4]).hour() * 3600,
+                                                         QTime::fromString(parts[3]).second() + QTime::fromString(parts[3]).minute() * 60 + QTime::fromString(parts[3]).hour() * 3600,
+                                                         timeToSeconds(parts[5].toStdString())));
             }
         }
     }
@@ -147,7 +191,7 @@ void MainWindow::calculateTimeUsage() {
     QString appsStartTimeOutput;
     QString appsEndTimeOutput;
     QString appsLastTimeOutput;
-    QString appsTimeOutput;    
+    QString appsTimeOutput;
     QString appsTotalTimeOutput;
 
     ui->appsOutputLabel->clear();
@@ -244,3 +288,15 @@ std::list<QString> MainWindow::getActiveApps() {
 
     return windows;
 }
+
+void MainWindow::on_autoRunCheckBox_stateChanged(int arg1)
+{
+    setAutorun(arg1);
+}
+
+
+void MainWindow::on_pushButton_clicked() {
+    this->hide();
+    trayIcon->show();
+}
+

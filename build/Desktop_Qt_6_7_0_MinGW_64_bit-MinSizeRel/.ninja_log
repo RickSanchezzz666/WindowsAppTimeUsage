@@ -1,0 +1,10 @@
+# ninja log v5
+4	1821	7356679385674275	TimeUsage_autogen/timestamp	f9c5a53a48db4032
+4	1821	7356679385674275	TimeUsage_autogen/mocs_compilation.cpp	f9c5a53a48db4032
+4	1821	7356679385674275	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-MinSizeRel/TimeUsage_autogen/timestamp	f9c5a53a48db4032
+4	1821	7356679385674275	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-MinSizeRel/TimeUsage_autogen/mocs_compilation.cpp	f9c5a53a48db4032
+1831	4817	7356679416338172	CMakeFiles/TimeUsage.dir/csvFileController.cpp.obj	8cd44e1281ad2d6b
+1825	6968	7356679437910464	CMakeFiles/TimeUsage.dir/main.cpp.obj	acde2c388b3fcc18
+1821	7210	7356679440343957	CMakeFiles/TimeUsage.dir/TimeUsage_autogen/mocs_compilation.cpp.obj	a35525751243f69e
+1828	8193	7356679450233448	CMakeFiles/TimeUsage.dir/mainwindow.cpp.obj	591a56345a2095b0
+8193	8424	7356679452507370	TimeUsage.exe	2d29db18fe099ce8
