@@ -1,6 +1,6 @@
 # Time Usage Counter on Windows.
 
-## !!!When you run the app, it will be hidden from the user's view for your convenience. !!
+## !!!When you run the app, it will be hidden from the user's view for your convenience!!!
 ## To open the app, double-click on the icon in the system tray located at the bottom right of the taskbar.
 
 ##Stack
