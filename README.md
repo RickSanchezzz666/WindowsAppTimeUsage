@@ -6,6 +6,7 @@
 ##Stack
 
 In this project, I have used ```C++ Qt Framework```. ```13.0.0 Qt Creator using Qt 6.7.0```.
+Tested on ```Windows 10 x64```.
 
 ##About Application
 
