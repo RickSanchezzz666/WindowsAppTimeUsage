@@ -9,6 +9,8 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSizeF \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QString \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QTime \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QTimer \
@@ -43,13 +45,18 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qcontainerinfo.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qcontainertools_impl.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qcontiguouscache.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qcoreapplication.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qcoreevent.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qdarwinhelpers.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qdatastream.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qdatetime.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qdeadlinetimer.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qdebug.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qdir.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qelapsedtimer.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qendian.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qeventloop.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qexceptionhandling.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qfile.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qfiledevice.h \
@@ -145,27 +152,38 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qversiontagging.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qxptype_traits.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qyieldcpu.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/QCloseEvent \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/QTransform \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/QWindow \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qaction.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qbitmap.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qbrush.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qcolor.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qcursor.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qevent.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qeventpoint.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qfont.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qfontinfo.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qfontmetrics.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qguiapplication.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qguiapplication_platform.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qicon.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qimage.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qinputdevice.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qinputmethod.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpointingdevice.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpolygon.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qregion.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qrgb.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qrgba64.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qscreen.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qscreen_platform.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qsurface.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qsurfaceformat.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
@@ -173,6 +191,8 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtransform.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qvector2d.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qvectornd.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindow.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \

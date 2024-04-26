@@ -15,6 +15,7 @@
 #include <QDir>
 #include <QSystemTrayIcon>
 #include <QPushButton>
+#include <QCloseEvent>
 
 #include <windows.h>
 #include <list>
@@ -64,12 +65,24 @@ public:
 
     bool isAutorunEnabled();
 
+    void refreshList();
+
+    void readFromLogs();
+
+    void updateLogs();
+
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
 
 private slots:
     void on_autoRunCheckBox_stateChanged(int arg1);
 
     void on_pushButton_clicked();
+
+    void on_refreshButton_clicked();
+
+protected:
+    void showEvent(QShowEvent *event) override;
+    void closeEvent(QCloseEvent *event) override;
 
 private:
     Ui::MainWindow *ui;

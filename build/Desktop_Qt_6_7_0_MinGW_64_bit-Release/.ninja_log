@@ -1,13 +1,13 @@
 # ninja log v5
-8	1429	7356748085596297	TimeUsage_autogen/timestamp	301c9ae07274f3ab
-8	1429	7356748085596297	TimeUsage_autogen/mocs_compilation.cpp	301c9ae07274f3ab
-8	1429	7356748085596297	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen/timestamp	301c9ae07274f3ab
-8	1429	7356748085596297	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen/mocs_compilation.cpp	301c9ae07274f3ab
-1429	1586	7356748087797363	TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp	7d0fe597bb6e1452
-1429	1586	7356748087797363	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp	7d0fe597bb6e1452
-1618	1797	7356748090091007	CMakeFiles/TimeUsage.dir/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp.obj	5ae958bc2c134d7b
-1609	4573	7356748117824583	CMakeFiles/TimeUsage.dir/csvFileController.cpp.obj	9f96e42cb55292ce
-1594	6251	7356748134637489	CMakeFiles/TimeUsage.dir/main.cpp.obj	aafe7a9c103c8ecc
-1587	6341	7356748135522244	CMakeFiles/TimeUsage.dir/TimeUsage_autogen/mocs_compilation.cpp.obj	42fc45880d79c62e
-1601	7260	7356748144701319	CMakeFiles/TimeUsage.dir/mainwindow.cpp.obj	84c4cac7bb02008d
-7260	7493	7356748146979118	TimeUsage.exe	b91bf81aeb561c02
+5	1638	7358489022593592	TimeUsage_autogen/timestamp	301c9ae07274f3ab
+5	1638	7358489022593592	TimeUsage_autogen/mocs_compilation.cpp	301c9ae07274f3ab
+5	1638	7358489022593592	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen/timestamp	301c9ae07274f3ab
+5	1638	7358489022593592	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen/mocs_compilation.cpp	301c9ae07274f3ab
+1639	1705	7358489023959933	TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp	7d0fe597bb6e1452
+1639	1705	7358489023959933	D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp	7d0fe597bb6e1452
+1719	1924	7358489026174014	CMakeFiles/TimeUsage.dir/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp.obj	5ae958bc2c134d7b
+1715	5059	7358489057440915	CMakeFiles/TimeUsage.dir/csvFileController.cpp.obj	9f96e42cb55292ce
+1709	7458	7358489081516892	CMakeFiles/TimeUsage.dir/main.cpp.obj	aafe7a9c103c8ecc
+1706	7795	7358489084889503	CMakeFiles/TimeUsage.dir/TimeUsage_autogen/mocs_compilation.cpp.obj	42fc45880d79c62e
+1712	8708	7358489094021049	CMakeFiles/TimeUsage.dir/mainwindow.cpp.obj	84c4cac7bb02008d
+8709	8965	7358489096527728	TimeUsage.exe	b91bf81aeb561c02
