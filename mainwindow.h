@@ -20,7 +20,6 @@
 #include <windows.h>
 #include <list>
 
-
 QT_BEGIN_NAMESPACE
 namespace Ui {
 class MainWindow;
@@ -49,7 +48,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
-    void setLabelText(QLabel* label, const QString& qText); // to set text into labels
+    static void setLabelText(QLabel* label, const QString& qText); // to set text into labels
 
     void getActiveProcesses(); // get processes
 
@@ -80,6 +79,8 @@ private slots:
 
     void on_refreshButton_clicked();
 
+    void on_editButton_clicked();
+
 protected:
     void showEvent(QShowEvent *event) override;
     void closeEvent(QCloseEvent *event) override;
@@ -96,6 +97,8 @@ private:
     QProcess *taskListProcess; // to show processes
 
     std::list<Application> listOfApplications;
+
+    std::list<QString> appsListNames;
 
 };
 #endif // MAINWINDOW_H

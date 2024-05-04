@@ -1,8 +1,11 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
 
+#include "editModalWindow.h"
+
 #include <vector>
 #include <sstream>
+#include <regex>
 
 #include "csvFileController.h"
 
@@ -126,8 +129,25 @@ long int MainWindow::timeToSeconds(const std::string& time) {
 void MainWindow::initialCalculation() {
     std::list<QString> currentAppsList = getActiveApps();
 
+    std::vector<std::string> blacklistContent = CSVController::readCSVFile("blacklist.csv", "AppName; NewAppName("" - blocked)\n");
+
     // updating list of apps by comparing to current active apps
     for (auto& app : currentAppsList) {
+        bool blacklist = false;
+        for (auto& name : blacklistContent) {
+            std::istringstream blacklistSs(name);
+            std::vector<QString> blacklistParts;
+            std::string blacklistPart;
+
+            while (std::getline(blacklistSs, blacklistPart, ';')) {
+                blacklistParts.push_back(QString::fromStdString(blacklistPart).trimmed());
+            }
+            if (blacklistParts[0] == app) {
+                blacklist = true;
+                break;
+            }
+        }
+        if (blacklist) continue;
         bool isAppExist = false;
         for (auto& existApp : listOfApplications) {
             if (existApp.appName == app) {
@@ -164,8 +184,25 @@ void MainWindow::calculateTimeUsage() {
         }
     }
 
+    std::vector<std::string> blacklistContent = CSVController::readCSVFile("blacklist.csv", "AppName; NewAppName("" - blocked)\n");
+
     // updating list of apps by comparing to current active apps
     for (const auto& app : currentAppsList) {
+        bool blacklist = false;
+        for (auto& name : blacklistContent) {
+            std::istringstream blacklistSs(name);
+            std::vector<QString> blacklistParts;
+            std::string blacklistPart;
+
+            while (std::getline(blacklistSs, blacklistPart, ';')) {
+                blacklistParts.push_back(QString::fromStdString(blacklistPart).trimmed());
+            }
+            if (blacklistParts[0] == app) {
+                blacklist = true;
+                break;
+            }
+        }
+        if (blacklist) continue;
         bool isExist = false;
         for (auto& existApp : listOfApplications) {
             if (app == existApp.appName) {
@@ -270,9 +307,25 @@ std::list<QString> MainWindow::getActiveApps() {
         }
         while (title.find("-") != std::string::npos); // while there are "-" symbol
 
-        QString trimmedTitle = QString::fromStdString(title).trimmed(); // delete spaces in string
+        std::vector<std::string> blacklistContent = CSVController::readCSVFile("blacklist.csv", "AppName; NewAppName\n");
 
-        window = trimmedTitle;
+        QString newTitle = QString::fromStdString(std::regex_replace(title, std::regex("[ ,]+"), "")); // delete spaces and commas in string
+
+        for(auto& line : blacklistContent) {
+            std::istringstream ss(line);
+            std::vector<QString> parts;
+            std::string part;
+
+            while (std::getline(ss, part, ';')) {
+                parts.push_back(QString::fromStdString(part).trimmed());
+            }
+            if (newTitle == parts[0] && !parts[1].isEmpty()) {
+                newTitle = parts[1].trimmed();
+                break;
+            }
+        }
+
+        window = newTitle;
     }
 
     return windows;
@@ -281,9 +334,10 @@ std::list<QString> MainWindow::getActiveApps() {
 void MainWindow::readFromLogs() {
     listOfApplications.clear();
 
+    std::vector<std::string> blacklistContent = CSVController::readCSVFile("blacklist.csv", "AppName; NewAppName("" - blocked)\n");
+
     std::vector<std::string> content = CSVController::readCSVFile();
     for (auto& line : content) {
-        bool found = false;
         std::istringstream ss(line);
         std::vector<QString> parts;
         std::string part;
@@ -291,25 +345,27 @@ void MainWindow::readFromLogs() {
         while (std::getline(ss, part, ';')) {
             parts.push_back(QString::fromStdString(part).trimmed());
         }
-        for (auto& existApp : listOfApplications) { // find if current app is in log file, then update existed info
-            size_t foundApp = line.find(existApp.appName.toStdString());
-            if (foundApp != std::string::npos) {
-                existApp.sessionStartTime = QDateTime::fromString(parts[1], "yyyy-MM-dd hh:mm:ss");
-                existApp.sessionEndTime = QDateTime::fromString(parts[2], "yyyy-MM-dd hh:mm:ss");
-                existApp.lastSessionTime = QTime::fromString(parts[3]).second() + QTime::fromString(parts[3]).minute() * 60 + QTime::fromString(parts[3]).hour() * 3600;
-                existApp.sessionTime = QTime::fromString(parts[4]).second() + QTime::fromString(parts[4]).minute() * 60 + QTime::fromString(parts[4]).hour() * 3600;
-                existApp.totalTime += timeToSeconds(parts[5].toStdString());
-                found = true;
+        if (parts[0] == "AppName") continue;
+        bool blacklist = false;
+        for (auto& name : blacklistContent) {
+            std::istringstream blacklistSs(name);
+            std::vector<QString> blacklistParts;
+            std::string blacklistPart;
+
+            while (std::getline(blacklistSs, blacklistPart, ';')) {
+                blacklistParts.push_back(QString::fromStdString(blacklistPart).trimmed());
+            }
+            if (blacklistParts[0] == parts[0]) {
+                blacklist = true;
+                break;
             }
         }
-        if (!found) { // if app doesn't exist in log file, then we creating it
-            if (parts[0] == "AppName") continue;
-            listOfApplications.push_back(Application(parts[0], false, QDateTime::fromString(parts[1], "yyyy-MM-dd hh:mm:ss"),
-                                                     QDateTime::fromString(parts[2], "yyyy-MM-dd hh:mm:ss"),
-                                                     QTime::fromString(parts[4]).second() + QTime::fromString(parts[4]).minute() * 60 + QTime::fromString(parts[4]).hour() * 3600,
-                                                     QTime::fromString(parts[3]).second() + QTime::fromString(parts[3]).minute() * 60 + QTime::fromString(parts[3]).hour() * 3600,
-                                                     timeToSeconds(parts[5].toStdString())));
-        }
+        if (blacklist) continue;
+        listOfApplications.push_back(Application(parts[0], false, QDateTime::fromString(parts[1], "yyyy-MM-dd hh:mm:ss"),
+                                                 QDateTime::fromString(parts[2], "yyyy-MM-dd hh:mm:ss"),
+                                                 QTime::fromString(parts[4]).second() + QTime::fromString(parts[4]).minute() * 60 + QTime::fromString(parts[4]).hour() * 3600,
+                                                 QTime::fromString(parts[3]).second() + QTime::fromString(parts[3]).minute() * 60 + QTime::fromString(parts[3]).hour() * 3600,
+                                                 timeToSeconds(parts[5].toStdString())));
     }
 }
 
@@ -317,12 +373,12 @@ void MainWindow::updateLogs() {
     for (auto& existApp : listOfApplications) {
         try {
             int lTime = 0;
-            int total = existApp.totalTime;
+            long int total = existApp.totalTime;
             if (existApp.lastSessionTime <= 1 && existApp.sessionTime <= 1 && existApp.totalTime <= 5) break;
             if (existApp.lastSessionTime == 0 || existApp.sessionTime >= 1) {
                 lTime = existApp.sessionTime;
+                total += existApp.sessionTime;
             } else lTime = existApp.lastSessionTime;
-            total += (existApp.sessionTime <= 1 ? 0 : lTime);
             CSVController::editCSVFile(existApp.appName.toStdString(), existApp.sessionStartTime, existApp.sessionEndTime,
                                        lTime, 0, total);
         } catch (const std::exception& err) {
@@ -351,5 +407,12 @@ void MainWindow::on_pushButton_clicked() {
 void MainWindow::on_refreshButton_clicked()
 {
     refreshList();
+}
+
+
+void MainWindow::on_editButton_clicked() {
+    refreshList();
+    editModalWindow eWindow(listOfApplications, this);
+    eWindow.exec();
 }
 
