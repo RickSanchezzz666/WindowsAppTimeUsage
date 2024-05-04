@@ -262,6 +262,12 @@
 			null
 		],
 		[
+			"D:/Repos/TimeUsage/editModalWindow.h",
+			"MU",
+			"EWIEGA46WW/moc_editModalWindow.cpp",
+			null
+		],
+		[
 			"D:/Repos/TimeUsage/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -340,6 +346,7 @@
 	"SOURCES" : 
 	[
 		[ "D:/Repos/TimeUsage/csvFileController.cpp", "MU", null ],
+		[ "D:/Repos/TimeUsage/editModalWindow.cpp", "MU", null ],
 		[ "D:/Repos/TimeUsage/main.cpp", "MU", null ],
 		[ "D:/Repos/TimeUsage/mainwindow.cpp", "MU", null ]
 	],

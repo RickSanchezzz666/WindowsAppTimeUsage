@@ -68,6 +68,10 @@ public:
     QHBoxLayout *horizontalLayout;
     QCheckBox *autoRunCheckBox;
     QSpacerItem *horizontalSpacer;
+    QPushButton *editButton;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *refreshButton;
+    QSpacerItem *horizontalSpacer_2;
     QPushButton *pushButton;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -331,6 +335,24 @@ public:
 
         horizontalLayout->addItem(horizontalSpacer);
 
+        editButton = new QPushButton(centralwidget);
+        editButton->setObjectName("editButton");
+
+        horizontalLayout->addWidget(editButton);
+
+        horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_3);
+
+        refreshButton = new QPushButton(centralwidget);
+        refreshButton->setObjectName("refreshButton");
+
+        horizontalLayout->addWidget(refreshButton);
+
+        horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
+
+        horizontalLayout->addItem(horizontalSpacer_2);
+
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName("pushButton");
 
@@ -363,6 +385,8 @@ public:
         label_5->setText(QCoreApplication::translate("MainWindow", "Current Session Time", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Total Time Spent (minutes)", nullptr));
         autoRunCheckBox->setText(QCoreApplication::translate("MainWindow", "Turn ON AutoRun", nullptr));
+        editButton->setText(QCoreApplication::translate("MainWindow", "Edit List", nullptr));
+        refreshButton->setText(QCoreApplication::translate("MainWindow", "Refresh List", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Hide into Tray", nullptr));
     } // retranslateUi
 

@@ -81,6 +81,14 @@ build CMakeFiles/TimeUsage.dir/csvFileController.cpp.obj: CXX_COMPILER__TimeUsag
   OBJECT_DIR = CMakeFiles\TimeUsage.dir
   OBJECT_FILE_DIR = CMakeFiles\TimeUsage.dir
 
+build CMakeFiles/TimeUsage.dir/editModalWindow.cpp.obj: CXX_COMPILER__TimeUsage_unscanned_Debug D$:/Repos/TimeUsage/editModalWindow.cpp || cmake_object_order_depends_target_TimeUsage
+  DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
+  DEP_FILE = CMakeFiles\TimeUsage.dir\editModalWindow.cpp.obj.d
+  FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always
+  INCLUDES = -ID:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/TimeUsage_autogen/include -isystem D:/Programms/Qt/6.7.0/mingw_64/include/QtCore -isystem D:/Programms/Qt/6.7.0/mingw_64/include -isystem D:/Programms/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -isystem D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets -isystem D:/Programms/Qt/6.7.0/mingw_64/include/QtGui
+  OBJECT_DIR = CMakeFiles\TimeUsage.dir
+  OBJECT_FILE_DIR = CMakeFiles\TimeUsage.dir
+
 build CMakeFiles/TimeUsage.dir/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp.obj: CXX_COMPILER__TimeUsage_unscanned_Debug D$:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp || cmake_object_order_depends_target_TimeUsage
   DEFINES = -DMINGW_HAS_SECURE_API=1 -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NEEDS_QMAIN -DQT_WIDGETS_LIB -DUNICODE -DWIN32 -DWIN64 -D_ENABLE_EXTENDED_ALIGNED_STORAGE -D_UNICODE -D_WIN64
   DEP_FILE = CMakeFiles\TimeUsage.dir\TimeUsage_autogen\EWIEGA46WW\qrc_Resources.cpp.obj.d
@@ -97,7 +105,7 @@ build CMakeFiles/TimeUsage.dir/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp.ob
 #############################################
 # Link the executable TimeUsage.exe
 
-build TimeUsage.exe: CXX_EXECUTABLE_LINKER__TimeUsage_Debug CMakeFiles/TimeUsage.dir/TimeUsage_autogen/mocs_compilation.cpp.obj CMakeFiles/TimeUsage.dir/main.cpp.obj CMakeFiles/TimeUsage.dir/mainwindow.cpp.obj CMakeFiles/TimeUsage.dir/csvFileController.cpp.obj CMakeFiles/TimeUsage.dir/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp.obj | D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Gui.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a || TimeUsage_autogen TimeUsage_autogen_timestamp_deps
+build TimeUsage.exe: CXX_EXECUTABLE_LINKER__TimeUsage_Debug CMakeFiles/TimeUsage.dir/TimeUsage_autogen/mocs_compilation.cpp.obj CMakeFiles/TimeUsage.dir/main.cpp.obj CMakeFiles/TimeUsage.dir/mainwindow.cpp.obj CMakeFiles/TimeUsage.dir/csvFileController.cpp.obj CMakeFiles/TimeUsage.dir/editModalWindow.cpp.obj CMakeFiles/TimeUsage.dir/TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp.obj | D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Gui.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a || TimeUsage_autogen TimeUsage_autogen_timestamp_deps
   FLAGS = -DQT_QML_DEBUG -g
   LINK_FLAGS = -mwindows
   LINK_LIBRARIES = D:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a  D:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Gui.a  D:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a  -lmpr  -luserenv  -lmingw32  D:/Programms/Qt/6.7.0/mingw_64/lib/libQt6EntryPoint.a  -lshell32  -ld3d11  -ldxgi  -ldxguid  -ld3d12  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
@@ -184,7 +192,7 @@ build TimeUsage_autogen_timestamp_deps: phony CMakeFiles/TimeUsage_autogen_times
 #############################################
 # Utility command for TimeUsage_autogen
 
-build TimeUsage_autogen: phony CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h TimeUsage_autogen/timestamp TimeUsage_autogen/mocs_compilation.cpp TimeUsage_autogen_timestamp_deps
+build TimeUsage_autogen: phony CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h TimeUsage_autogen/include/ui_editmodalwindow.h TimeUsage_autogen/timestamp TimeUsage_autogen/mocs_compilation.cpp TimeUsage_autogen_timestamp_deps
 
 
 #############################################
@@ -209,13 +217,13 @@ build TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_workdir}Tim
 #############################################
 # Phony custom command for CMakeFiles\TimeUsage_autogen_timestamp_deps
 
-build CMakeFiles/TimeUsage_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen_timestamp_deps: phony D$:/Programms/Qt/6.7.0/mingw_64/./bin/uic.exe D$:/Programms/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a
+build CMakeFiles/TimeUsage_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen_timestamp_deps: phony D$:/Programms/Qt/6.7.0/mingw_64/./bin/uic.exe D$:/Programms/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a
 
 
 #############################################
 # Phony custom command for CMakeFiles\TimeUsage_autogen
 
-build CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen ${cmake_ninja_workdir}TimeUsage_autogen/include/ui_mainwindow.h: phony TimeUsage_autogen/timestamp || TimeUsage_autogen_timestamp_deps
+build CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h TimeUsage_autogen/include/ui_editmodalwindow.h | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen ${cmake_ninja_workdir}TimeUsage_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}TimeUsage_autogen/include/ui_editmodalwindow.h: phony TimeUsage_autogen/timestamp || TimeUsage_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.
