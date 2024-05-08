@@ -15,14 +15,14 @@ and the total time spent will be automatically updated in the ```timeUsageLogs.c
 
 # ChangeLog
 
-## 1.0.0v
-Main app logic, time calculation.
-
-## 1.1.0v
-Hiding into a tray and trying to implement Autorun function. (Couldn't impelement it due to unknown bug)
+## 1.3.0v - Current version
+Added ability to delete app from blacklist and some minor changes. Temporarily deleted Autorun feature.
 
 ## 1.2.0v
 Added apps blacklist and ability to change app's name.
 
-## 1.3.0v - Current version
-Added ability to delete app from blacklist and some minor changes. Temporarily deleted Autorun feature.
+## 1.1.0v
+Hiding into a tray and trying to implement Autorun function. (Couldn't impelement it due to unknown bug)
+
+## 1.0.0v
+Main app logic, time calculation.
