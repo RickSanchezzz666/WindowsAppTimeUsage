@@ -6,7 +6,6 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QList \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QMargins \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QObject \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize \
@@ -97,7 +96,6 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qoverload.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpair.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocess.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocessordetection.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \

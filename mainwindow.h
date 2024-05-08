@@ -3,7 +3,6 @@
 
 #include <QMainWindow>
 #include <QString>
-#include <QProcess>
 #include <QDebug>
 #include <QList>
 #include <QWindow>
@@ -50,8 +49,6 @@ public:
 
     static void setLabelText(QLabel* label, const QString& qText); // to set text into labels
 
-    void getActiveProcesses(); // get processes
-
     std::list<QString> getActiveApps(); // get apps
 
     void calculateTimeUsage();
@@ -60,9 +57,9 @@ public:
 
     long int timeToSeconds(const std::string& time);
 
-    void setAutorun(int arg);
+    // void setAutorun(int arg);
 
-    bool isAutorunEnabled();
+    // bool isAutorunEnabled();
 
     void refreshList();
 
@@ -73,7 +70,7 @@ public:
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
 
 private slots:
-    void on_autoRunCheckBox_stateChanged(int arg1);
+    // void on_autoRunCheckBox_stateChanged(int arg1);
 
     void on_pushButton_clicked();
 
@@ -90,11 +87,9 @@ private:
 
     QSystemTrayIcon *trayIcon;
 
-    bool autoRun = false;
+    // bool autoRun = false;
 
     QTimer *timer;
-
-    QProcess *taskListProcess; // to show processes
 
     std::list<Application> listOfApplications;
 

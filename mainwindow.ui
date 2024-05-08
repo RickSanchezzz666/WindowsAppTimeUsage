@@ -412,32 +412,9 @@
     <item row="2" column="0">
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
-       <widget class="QCheckBox" name="autoRunCheckBox">
+       <widget class="QPushButton" name="refreshButton">
         <property name="text">
-         <string>Turn ON AutoRun</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QPushButton" name="editButton">
-        <property name="text">
-         <string>Edit List</string>
+         <string>Refresh List</string>
         </property>
        </widget>
       </item>
@@ -455,9 +432,9 @@
        </spacer>
       </item>
       <item>
-       <widget class="QPushButton" name="refreshButton">
+       <widget class="QPushButton" name="editButton">
         <property name="text">
-         <string>Refresh List</string>
+         <string>Edit List</string>
         </property>
        </widget>
       </item>

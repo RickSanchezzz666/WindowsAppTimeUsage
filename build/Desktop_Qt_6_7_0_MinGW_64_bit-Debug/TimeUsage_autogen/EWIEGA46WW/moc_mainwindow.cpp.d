@@ -7,7 +7,6 @@ D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/TimeUsage_autogen/E
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QList \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QMargins \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QObject \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize \
@@ -98,7 +97,6 @@ D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Debug/TimeUsage_autogen/E
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qoverload.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpair.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocess.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocessordetection.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \

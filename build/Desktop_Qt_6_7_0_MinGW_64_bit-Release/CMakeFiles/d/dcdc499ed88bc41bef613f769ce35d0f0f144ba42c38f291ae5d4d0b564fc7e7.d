@@ -6,7 +6,6 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QList \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QMargins \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QObject \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize \
@@ -97,7 +96,6 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qoverload.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpair.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocess.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocessordetection.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \
@@ -174,6 +172,7 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qkeysequence.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpaintdevice.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpalette.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpicture.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpixelformat.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qpixmap.h \
@@ -186,7 +185,10 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qscreen_platform.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qsurface.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qsurfaceformat.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtgui-config.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtguiexports.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qtguiglobal.h \
@@ -196,17 +198,22 @@ TimeUsage_autogen/timestamp: \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindow.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QDialog \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QLineEdit \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QSystemTrayIcon \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QVBoxLayout \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qboxlayout.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qgridlayout.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qlayout.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qlineedit.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qsizepolicy.h \
@@ -842,6 +849,7 @@ TimeUsage_autogen/timestamp: \
   D:/Repos/TimeUsage/csvFileController.h \
   D:/Repos/TimeUsage/editModalWindow.cpp \
   D:/Repos/TimeUsage/editModalWindow.h \
+  D:/Repos/TimeUsage/editmodalwindow.ui \
   D:/Repos/TimeUsage/main.cpp \
   D:/Repos/TimeUsage/mainwindow.cpp \
   D:/Repos/TimeUsage/mainwindow.h \
