@@ -12,7 +12,6 @@ D:/Repos/TimeUsage/mainwindow.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QList
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QMargins
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QObject
- mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize
@@ -103,7 +102,6 @@ D:/Repos/TimeUsage/mainwindow.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qoverload.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpair.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h
- mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocess.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocessordetection.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrect.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h
@@ -677,7 +675,6 @@ D:/Repos/TimeUsage/editModalWindow.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QList
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QMargins
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QObject
- mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize
@@ -768,7 +765,6 @@ D:/Repos/TimeUsage/editModalWindow.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qoverload.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpair.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h
- mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocess.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocessordetection.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrect.h
  mdp:D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h

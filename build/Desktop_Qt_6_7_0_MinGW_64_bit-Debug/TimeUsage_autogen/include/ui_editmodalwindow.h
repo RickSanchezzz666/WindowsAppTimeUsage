@@ -43,9 +43,9 @@ public:
     QSpacerItem *verticalSpacer_4;
     QPushButton *blacklistEditButton;
     QSpacerItem *verticalSpacer;
-    QPushButton *editAppButton;
-    QSpacerItem *verticalSpacer_2;
     QPushButton *deleteAppButton;
+    QSpacerItem *verticalSpacer_2;
+    QPushButton *editAppButton;
     QSpacerItem *verticalSpacer_3;
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
@@ -142,22 +142,22 @@ public:
 
         verticalLayout_2->addItem(verticalSpacer);
 
-        editAppButton = new QPushButton(appsScrollAreaWidget);
-        editAppButton->setObjectName("editAppButton");
-        editAppButton->setMinimumSize(QSize(0, 50));
-
-        verticalLayout_2->addWidget(editAppButton);
-
-        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
-
-        verticalLayout_2->addItem(verticalSpacer_2);
-
         deleteAppButton = new QPushButton(appsScrollAreaWidget);
         deleteAppButton->setObjectName("deleteAppButton");
         deleteAppButton->setMinimumSize(QSize(0, 50));
         deleteAppButton->setBaseSize(QSize(0, 0));
 
         verticalLayout_2->addWidget(deleteAppButton);
+
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
+
+        verticalLayout_2->addItem(verticalSpacer_2);
+
+        editAppButton = new QPushButton(appsScrollAreaWidget);
+        editAppButton->setObjectName("editAppButton");
+        editAppButton->setMinimumSize(QSize(0, 50));
+
+        verticalLayout_2->addWidget(editAppButton);
 
         verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Policy::Minimum, QSizePolicy::Policy::Expanding);
 
@@ -205,8 +205,8 @@ public:
         label->setText(QCoreApplication::translate("editModalWindow", "ApplicationName", nullptr));
         label_2->setText(QCoreApplication::translate("editModalWindow", "Edit info", nullptr));
         blacklistEditButton->setText(QCoreApplication::translate("editModalWindow", "Blacklist edit", nullptr));
-        editAppButton->setText(QCoreApplication::translate("editModalWindow", "Edit Application's Name", nullptr));
         deleteAppButton->setText(QCoreApplication::translate("editModalWindow", "Delete Application from list", nullptr));
+        editAppButton->setText(QCoreApplication::translate("editModalWindow", "Edit Application's Name", nullptr));
         refreshListButton->setText(QCoreApplication::translate("editModalWindow", "Refresh Apps List", nullptr));
     } // retranslateUi
 

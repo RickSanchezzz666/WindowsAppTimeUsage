@@ -176,15 +176,21 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="editAppButton">
+            <widget class="QPushButton" name="deleteAppButton">
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>50</height>
               </size>
              </property>
+             <property name="baseSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="text">
-              <string>Edit Application's Name</string>
+              <string>Delete Application from list</string>
              </property>
             </widget>
            </item>
@@ -202,21 +208,15 @@
             </spacer>
            </item>
            <item>
-            <widget class="QPushButton" name="deleteAppButton">
+            <widget class="QPushButton" name="editAppButton">
              <property name="minimumSize">
               <size>
                <width>0</width>
                <height>50</height>
               </size>
              </property>
-             <property name="baseSize">
-              <size>
-               <width>0</width>
-               <height>0</height>
-              </size>
-             </property>
              <property name="text">
-              <string>Delete Application from list</string>
+              <string>Edit Application's Name</string>
              </property>
             </widget>
            </item>

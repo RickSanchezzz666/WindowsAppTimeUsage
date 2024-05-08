@@ -33,12 +33,16 @@ public:
 
     bool deleteAppFromlist(const QString& appName);
 
+    QString setBlacklistInLabel(QLabel* label);
+
 private slots:
     void on_deleteAppButton_clicked();
 
     void on_refreshListButton_clicked();
 
     void on_editAppButton_clicked();
+
+    void on_blacklistEditButton_clicked();
 
 private:
     Ui::editModalWindow *ui;

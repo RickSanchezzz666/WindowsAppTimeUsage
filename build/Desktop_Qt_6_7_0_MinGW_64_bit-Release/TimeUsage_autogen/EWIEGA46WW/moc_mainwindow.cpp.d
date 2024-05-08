@@ -7,7 +7,6 @@ D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QList \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QMargins \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QObject \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QProcess \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QRect \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSettings \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/QSize \
@@ -98,7 +97,6 @@ D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qoverload.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpair.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qpoint.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocess.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qprocessordetection.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrect.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtCore/qrefcount.h \
@@ -197,15 +195,11 @@ D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindow.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtGui/qwindowdefs_win.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QDialog \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QLabel \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QMainWindow \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/QSystemTrayIcon \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-  D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qdialog.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qlabel.h \
   D:/Programms/Qt/6.7.0/mingw_64/include/QtWidgets/qmainwindow.h \
@@ -663,5 +657,4 @@ D:/Repos/TimeUsage/build/Desktop_Qt_6_7_0_MinGW_64_bit-Release/TimeUsage_autogen
   D:/Programms/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wnnc.h \
   D:/Programms/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wow64apiset.h \
   D:/Programms/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wtypes.h \
-  D:/Programms/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wtypesbase.h \
-  D:/Repos/TimeUsage/editModalWindow.h
+  D:/Programms/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wtypesbase.h

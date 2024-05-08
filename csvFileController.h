@@ -16,6 +16,7 @@ public:
     static void deleteFromlogs(const std::string& appName, const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName\n");
     static void deleteFromlogsNoBlacklist(const std::string& appName, const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName\n");
     static bool changeNameInLogs(const std::string& appName, const std::string& appNameChange, const std::string& fileName = "timeUsageLogs.csv", const std::string& header = "AppName; NewAppName\n");
+    static bool deleteFromBlackList(const std::string& appName, const std::string& fileName = "blacklist.csv", const std::string& header = "AppName; NewAppName("" - blocked)\n");
 
     static std::string secondsToTime(long int& seconds);
 };

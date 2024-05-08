@@ -39,8 +39,8 @@ MainWindow::MainWindow(QWidget *parent)
 
     initialCalculation();
 
-    autoRun = isAutorunEnabled();
-    if (autoRun) ui->autoRunCheckBox->setCheckState(Qt::Checked);
+    // autoRun = isAutorunEnabled();
+    // if (autoRun) ui->autoRunCheckBox->setCheckState(Qt::Checked);
 
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::calculateTimeUsage); // timer every 1s running function calculateTimeUsage
@@ -67,20 +67,19 @@ void MainWindow::closeEvent(QCloseEvent *event) {
     }
 }
 
-bool MainWindow::isAutorunEnabled() {
-    QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
-    QString appPath = QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
-    appPath = "\"" + appPath + "\"";
-    appPath += " -silent";
-    QString appName = QCoreApplication::applicationName();
-    QString regValue = settings.value(appName).toString();
-    return (regValue == appPath);
-}
+// bool MainWindow::isAutorunEnabled() {
+//     QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
+//     QString appPath = QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
+//     appPath = "\"" + appPath + "\"";
+//     appPath += " -silent";
+//     QString appName = QCoreApplication::applicationName();
+//     QString regValue = settings.value(appName).toString();
+//     return (regValue == appPath);
+// }
 
 // Main Window Destructor
 MainWindow::~MainWindow()
 {
-
     // add info into log file after programm is closed
     updateLogs();
 
@@ -89,30 +88,26 @@ MainWindow::~MainWindow()
     delete trayIcon;
 
     delete timer;
-
-    if (taskListProcess) {
-        taskListProcess->kill();
-        taskListProcess->waitForFinished();
-        delete taskListProcess;
-    }
 }
 
-void MainWindow::setAutorun(int arg) {
-    QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
+// void MainWindow::setAutorun(int arg) {
+//     QSettings settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
 
-    autoRun = (arg == 0 ? false : true);
+//     autoRun = (arg == 0 ? false : true);
 
-    if (autoRun) {
-        QString appName = QCoreApplication::applicationName();
-        QString appPath = QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
-        appPath = "\"" + appPath + "\"";
-        appPath += " -silent";
-        settings.setValue(appName, appPath);
-    } else {
-        QString appName = QCoreApplication::applicationName();
-        settings.remove(appName);
-    }
-}
+//     QString appName = QCoreApplication::applicationName();
+
+//     if (autoRun) {
+//         QString appPath = QDir::toNativeSeparators(QCoreApplication::applicationFilePath());
+//         appPath = "\"" + appPath + "\"";
+//         appPath += " -silent";
+//         settings.setValue(appName, appPath);
+//     } else {
+//         settings.remove(appName);
+//     }
+
+//     settings.sync();
+// }
 
 
 long int MainWindow::timeToSeconds(const std::string& time) {
@@ -267,20 +262,6 @@ void MainWindow::setLabelText(QLabel* label, const QString& qText) {
     label->setText(label->text() + qText);
 }
 
-// get active processes of computer
-void MainWindow::getActiveProcesses() {
-    taskListProcess = new QProcess(this); // creates new process
-    ui->appsOutputLabel->clear(); // clear old label before appending info
-
-    connect(taskListProcess, &QProcess::readyReadStandardOutput, this, [this](){ // reading every process
-        QString processOutput = taskListProcess->readAllStandardOutput(); // read all output
-        setLabelText(ui->appsOutputLabel, processOutput);
-    });
-
-    taskListProcess->start("tasklist"); // start process of TaskList reading
-}
-
-
 // get active active apps opened on computer
 std::list<QString> MainWindow::getActiveApps() {
     std::list<QString> windows;
@@ -392,10 +373,10 @@ void MainWindow::refreshList() {
     readFromLogs();
 }
 
-void MainWindow::on_autoRunCheckBox_stateChanged(int arg1)
-{
-    setAutorun(arg1);
-}
+// void MainWindow::on_autoRunCheckBox_stateChanged(int arg1)
+// {
+//     setAutorun(arg1);
+// }
 
 
 void MainWindow::on_pushButton_clicked() {

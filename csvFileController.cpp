@@ -6,7 +6,8 @@
 const std::vector<std::string> __initiallyBlockedApps = {
     "EditYourList",
     "ChangeName",
-    "Delete"
+    "Delete",
+    "Blacklist"
 };
 
 std::string CSVController::secondsToTime(long int& seconds) {
@@ -20,6 +21,35 @@ std::string CSVController::secondsToTime(long int& seconds) {
     if (minutes < 10) minutesStr = "0" + minutesStr;
 
     return hoursStr + ":" + minutesStr;
+}
+
+bool CSVController::deleteFromBlackList(const std::string& appName, const std::string& fileName, const std::string& header) {
+    try {
+        std::vector<std::string> content = readCSVFile(fileName, header);
+
+        auto it = content.begin();
+
+        size_t foundName;
+        for (auto& line : content) {
+            foundName = line.find(appName);
+            if (foundName != std::string::npos) {
+                content.erase(it);
+                break;
+            } else ++it;
+        }
+
+        std::ofstream blacklist("blacklist.csv", std::ios::trunc);
+
+        for (auto& line : content) {
+            blacklist << line;
+        }
+
+        blacklist.close();
+        return true;
+    } catch (const std::exception& err) {
+        throw std::runtime_error(err.what());
+        return false;
+    }
 }
 
 void CSVController::deleteFromlogs(const std::string& appName, const std::string& fileName, const std::string& header) {

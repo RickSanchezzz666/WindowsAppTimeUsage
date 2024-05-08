@@ -192,7 +192,7 @@ build TimeUsage_autogen_timestamp_deps: phony CMakeFiles/TimeUsage_autogen_times
 #############################################
 # Utility command for TimeUsage_autogen
 
-build TimeUsage_autogen: phony CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h TimeUsage_autogen/timestamp TimeUsage_autogen/mocs_compilation.cpp TimeUsage_autogen_timestamp_deps
+build TimeUsage_autogen: phony CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h TimeUsage_autogen/include/ui_editmodalwindow.h TimeUsage_autogen/timestamp TimeUsage_autogen/mocs_compilation.cpp TimeUsage_autogen_timestamp_deps
 
 
 #############################################
@@ -217,13 +217,13 @@ build TimeUsage_autogen/EWIEGA46WW/qrc_Resources.cpp | ${cmake_ninja_workdir}Tim
 #############################################
 # Phony custom command for CMakeFiles\TimeUsage_autogen_timestamp_deps
 
-build CMakeFiles/TimeUsage_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen_timestamp_deps: phony D$:/Programms/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Programms/Qt/6.7.0/mingw_64/./bin/uic.exe D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a
+build CMakeFiles/TimeUsage_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen_timestamp_deps: phony D$:/Programms/Qt/6.7.0/mingw_64/./bin/uic.exe D$:/Programms/Qt/6.7.0/mingw_64/./bin/moc.exe D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Core.a D$:/Programms/Qt/6.7.0/mingw_64/lib/libQt6Widgets.a
 
 
 #############################################
 # Phony custom command for CMakeFiles\TimeUsage_autogen
 
-build CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen ${cmake_ninja_workdir}TimeUsage_autogen/include/ui_mainwindow.h: phony TimeUsage_autogen/timestamp || TimeUsage_autogen_timestamp_deps
+build CMakeFiles/TimeUsage_autogen TimeUsage_autogen/include/ui_mainwindow.h TimeUsage_autogen/include/ui_editmodalwindow.h | ${cmake_ninja_workdir}CMakeFiles/TimeUsage_autogen ${cmake_ninja_workdir}TimeUsage_autogen/include/ui_mainwindow.h ${cmake_ninja_workdir}TimeUsage_autogen/include/ui_editmodalwindow.h: phony TimeUsage_autogen/timestamp || TimeUsage_autogen_timestamp_deps
 
 # =============================================================================
 # Target aliases.

@@ -11,7 +11,6 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QFrame>
 #include <QtWidgets/QGridLayout>
 #include <QtWidgets/QHBoxLayout>
@@ -66,11 +65,9 @@ public:
     QFrame *line_10;
     QLabel *appsOutputLabel_6;
     QHBoxLayout *horizontalLayout;
-    QCheckBox *autoRunCheckBox;
-    QSpacerItem *horizontalSpacer;
-    QPushButton *editButton;
-    QSpacerItem *horizontalSpacer_3;
     QPushButton *refreshButton;
+    QSpacerItem *horizontalSpacer_3;
+    QPushButton *editButton;
     QSpacerItem *horizontalSpacer_2;
     QPushButton *pushButton;
     QMenuBar *menubar;
@@ -326,28 +323,19 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName("horizontalLayout");
-        autoRunCheckBox = new QCheckBox(centralwidget);
-        autoRunCheckBox->setObjectName("autoRunCheckBox");
+        refreshButton = new QPushButton(centralwidget);
+        refreshButton->setObjectName("refreshButton");
 
-        horizontalLayout->addWidget(autoRunCheckBox);
-
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
-        editButton = new QPushButton(centralwidget);
-        editButton->setObjectName("editButton");
-
-        horizontalLayout->addWidget(editButton);
+        horizontalLayout->addWidget(refreshButton);
 
         horizontalSpacer_3 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
         horizontalLayout->addItem(horizontalSpacer_3);
 
-        refreshButton = new QPushButton(centralwidget);
-        refreshButton->setObjectName("refreshButton");
+        editButton = new QPushButton(centralwidget);
+        editButton->setObjectName("editButton");
 
-        horizontalLayout->addWidget(refreshButton);
+        horizontalLayout->addWidget(editButton);
 
         horizontalSpacer_2 = new QSpacerItem(40, 20, QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Minimum);
 
@@ -384,9 +372,8 @@ public:
         label_4->setText(QCoreApplication::translate("MainWindow", "Last Session Time", nullptr));
         label_5->setText(QCoreApplication::translate("MainWindow", "Current Session Time", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Total Time Spent (minutes)", nullptr));
-        autoRunCheckBox->setText(QCoreApplication::translate("MainWindow", "Turn ON AutoRun", nullptr));
-        editButton->setText(QCoreApplication::translate("MainWindow", "Edit List", nullptr));
         refreshButton->setText(QCoreApplication::translate("MainWindow", "Refresh List", nullptr));
+        editButton->setText(QCoreApplication::translate("MainWindow", "Edit List", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "Hide into Tray", nullptr));
     } // retranslateUi
 
