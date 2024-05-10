@@ -15,7 +15,10 @@ and the total time spent will be automatically updated in the ```timeUsageLogs.c
 
 # ChangeLog
 
-## 1.3.0v - Current version
+## 1.3.1v - Current version
+Added logs updater.
+
+## 1.3.0v
 Added ability to delete app from blacklist and some minor changes. Temporarily deleted Autorun feature.
 
 ## 1.2.0v
