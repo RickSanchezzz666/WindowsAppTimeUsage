@@ -45,6 +45,10 @@ MainWindow::MainWindow(QWidget *parent)
     timer = new QTimer(this);
     connect(timer, &QTimer::timeout, this, &MainWindow::calculateTimeUsage); // timer every 1s running function calculateTimeUsage
     timer->start(1000);
+
+    updateTimer = new QTimer(this);
+    connect(updateTimer, &QTimer::timeout, this, &MainWindow::logsUpdater); // timer every 30s running logs updater
+    updateTimer->start(30000);
 }
 
 void MainWindow::showEvent(QShowEvent *event) {
@@ -228,7 +232,6 @@ void MainWindow::calculateTimeUsage() {
             existApp.sessionEndTime = QDateTime().currentDateTime();
             existApp.isSession = false;
             existApp.lastSessionTime = existApp.sessionTime;
-            existApp.totalTime += existApp.sessionTime;
             existApp.sessionTime = 0;
         } else if (existApp.isActive && !existApp.isSession) { // app active now, but earlier wasn't in session
             existApp.sessionStartTime = QDateTime().currentDateTime();
@@ -350,18 +353,29 @@ void MainWindow::readFromLogs() {
     }
 }
 
+void MainWindow::logsUpdater() {
+    for (auto& existApp : listOfApplications) {
+        try {
+            if (existApp.lastSessionTime <= 1 && existApp.sessionTime <= 1 && existApp.totalTime <= 5) break;
+            if (existApp.isSession) existApp.totalTime += 30;
+            CSVController::editCSVFile(existApp.appName.toStdString(), existApp.sessionStartTime, existApp.sessionEndTime,
+                                       existApp.lastSessionTime, existApp.sessionTime, existApp.totalTime);
+        } catch (const std::exception& err) {
+            ui->statusbar->showMessage(err.what());
+        }
+    }
+}
+
 void MainWindow::updateLogs() {
     for (auto& existApp : listOfApplications) {
         try {
             int lTime = 0;
-            long int total = existApp.totalTime;
             if (existApp.lastSessionTime <= 1 && existApp.sessionTime <= 1 && existApp.totalTime <= 5) break;
             if (existApp.lastSessionTime == 0 || existApp.sessionTime >= 1) {
                 lTime = existApp.sessionTime;
-                total += existApp.sessionTime;
             } else lTime = existApp.lastSessionTime;
             CSVController::editCSVFile(existApp.appName.toStdString(), existApp.sessionStartTime, existApp.sessionEndTime,
-                                       lTime, 0, total);
+                                       lTime, 0, existApp.totalTime);
         } catch (const std::exception& err) {
             ui->statusbar->showMessage(err.what());
         }
