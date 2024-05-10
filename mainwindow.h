@@ -67,6 +67,8 @@ public:
 
     void updateLogs();
 
+    void logsUpdater();
+
     void trayIconActivated(QSystemTrayIcon::ActivationReason reason);
 
 private slots:
@@ -90,6 +92,8 @@ private:
     // bool autoRun = false;
 
     QTimer *timer;
+
+    QTimer *updateTimer;
 
     std::list<Application> listOfApplications;
 
