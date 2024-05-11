@@ -28,7 +28,7 @@ Added ability to delete app from blacklist and some minor changes. Temporarily d
 Added apps blacklist and ability to change app's name.
 
 ## 1.1.0v
-Hiding into a tray and trying to implement Autorun function. (Couldn't impelement it due to unknown bug)
+Hiding into a tray and trying to implement Autorun function. (Couldn't implement due to unknown bug)
 
 ## 1.0.0v
 Main app logic, time calculation.
