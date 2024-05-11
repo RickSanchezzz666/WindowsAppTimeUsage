@@ -15,7 +15,10 @@ and the total time spent will be automatically updated in the ```timeUsageLogs.c
 
 # ChangeLog
 
-## 1.3.1v - Current version
+## 1.3.2v - Current version
+Fixed some issues.
+
+## 1.3.1v
 Added logs updater.
 
 ## 1.3.0v
