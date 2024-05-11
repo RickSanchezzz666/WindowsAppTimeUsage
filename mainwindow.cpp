@@ -356,7 +356,7 @@ void MainWindow::readFromLogs() {
 void MainWindow::logsUpdater() {
     for (auto& existApp : listOfApplications) {
         try {
-            if (existApp.lastSessionTime <= 1 && existApp.sessionTime <= 1 && existApp.totalTime <= 5) break;
+            if (existApp.lastSessionTime <= 1 && existApp.sessionTime <= 1) break;
             if (existApp.isSession && existApp.isActive) existApp.totalTime += 30;
             CSVController::editCSVFile(existApp.appName.toStdString(), existApp.sessionStartTime, existApp.sessionEndTime,
                                        existApp.lastSessionTime, existApp.sessionTime, existApp.totalTime);
